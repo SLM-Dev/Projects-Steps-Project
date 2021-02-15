@@ -7,12 +7,49 @@
   }
   
   body {
+    background-color: red;
     font-family: 'Varela', sans-serif;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
     overflow: hidden;
     margin: 0;
+  }
+
+  .containter {
+    text-align: center;
+  }
+
+  /* progress container wraps around the numbers not the buttons, put in flex row*/
+  .progess-container{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 30px;
+    min-width: 100%;
+    width: 350px;
+  }
+
+  .progress-container:before {
+    background-color: #e0e0e0;
+    position: absolute;
+    top:50%;
+    left:0;
+    height: 4px;
+    width: 0%;
+    z-index: -1;
+    transform: translateY(-50%);
+    transition: 0.4s ease;
+  }
+  .progress {
+    background-color: #3498db;
+    position: absolute;
+    top:50%;
+    left:0;
+    height: 4px;
+    width: 0%;
+    z-index: -1;
+    transform: translateY(-50%);
+    transition: 0.4s ease;
   }

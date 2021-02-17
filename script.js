@@ -31,11 +31,16 @@ prev.addEventListener('click', () => {
 
 
 function update() {
-    circles.forEach((cirlce, idx )  => {
+    circles.forEach((circle, idx )  => {
         if(idx < currentActive) {
             circle.classList.add('active')
     } else {
-        cirlce.classList.remove('active')
+        circle.classList.remove('active')
     }
-    })
+})
+    //  
+    const actives = document.querySelectorAll('.active')
+    // console.log(actives.length / circles.length)
+    progress.style.width = (actives.length -1) / (circles.length -1) * 100 + '%'
+
 }
